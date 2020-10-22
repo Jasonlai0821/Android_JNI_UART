@@ -173,11 +173,11 @@ static void Xsy_CmdControl_native_finalize(JNIEnv *env,
 	serCmd->deInitSer();
 	if (serCmd != NULL) {
 		sp<SerialCommand> oldSerCmd = setCmdControl(env, thiz, 0);
-		if (oldSerCmd != NULL) {
+		//if (oldSerCmd != NULL) {
 			// this prevents native callbacks after the object is released
-			oldSerCmd->deInitSer();
-			oldSerCmd->setListener(0);
-		}
+		//	oldSerCmd->deInitSer();
+		//	oldSerCmd->setListener(0);
+		//}
 	}
 }
 
